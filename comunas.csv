@@ -1,0 +1,348 @@
+
+codigo_provincia,codigo_comuna,comuna
+151,15101,Arica
+151,15102,Camarones
+152,15201,Putre
+152,15202,General Lagos
+011,01101,Iquique
+011,01107,Alto Hospicio
+014,01401,Pozo Almonte
+014,01402,Camiña
+014,01403,Colchane
+014,01404,Huara
+014,01405,Pica
+021,02101,Antofagasta
+021,02102,Mejillones
+021,02103,Sierra Gorda
+021,02104,Taltal
+022,02201,Calama
+022,02202,Ollagüe
+022,02203,San Pedro de Atacama
+023,02301,Tocopilla
+023,02302,María Elena
+031,03101,Copiapó
+031,03102,Caldera
+031,03103,Tierra Amarilla
+032,03201,Chañaral
+032,03202,Diego de Almagro
+033,03301,Vallenar
+033,03302,Alto del Carmen
+033,03303,Freirina
+033,03304,Huasco
+041,04101,La Serena
+041,04102,Coquimbo
+041,04103,Andacollo
+041,04104,La Higuera
+041,04105,Paiguano
+041,04106,Vicuña
+042,04201,Illapel
+042,04202,Canela
+042,04203,Los Vilos
+042,04204,Salamanca
+043,04301,Ovalle
+043,04302,Combarbalá
+043,04303,Monte Patria
+043,04304,Punitaqui
+043,04305,Río Hurtado
+051,05101,Valparaíso
+051,05102,Casablanca
+051,05103,Concón
+051,05104,Juan Fernández
+051,05105,Puchuncaví
+051,05107,Quintero
+051,05109,Viña del Mar
+052,05201,Isla de Pascua	
+053,05301,Los Andes
+053,05302,Calle Larga
+053,05303,Rinconada
+053,05304,San Esteban
+054,05401,La Ligua
+054,05402,Cabildo
+054,05403,Papudo
+054,05404,Petorca
+054,05405,Zapallar
+055,05501,Quillota
+055,05502,Calera
+055,05503,Hijuelas
+055,05504,La Cruz
+055,05506,Nogales
+056,05601,San Antonio
+056,05602,Algarrobo
+056,05603,Cartagena
+056,05604,El Quisco
+056,05605,El Tabo
+056,05606,Santo Domingo
+057,05701,San Felipe
+057,05702,Catemu
+057,05703,Llaillay
+057,05704,Panquehue
+057,05705,Putaendo
+057,05706,Santa María
+058,05801,Quilpué
+058,05802,Limache
+058,05803,Olmué
+058,05804,Villa Alemana
+061,06101,Rancagua
+061,06102,Codegua
+061,06103,Coinco
+061,06104,Coltauco
+061,06105,Doñihue
+061,06106,Graneros
+061,06107,Las Cabras
+061,06108,Machalí
+061,06109,Malloa
+061,06110,Mostazal
+061,06111,Olivar
+061,06112,Peumo
+061,06113,Pichidegua
+061,06114,Quinta de Tilcoco
+061,06115,Rengo
+061,06116,Requínoa
+061,06117,San Vicente
+062,06201,Pichilemu
+062,06202,La Estrella
+062,06203,Litueche
+062,06204,Marchihue
+062,06205,Navidad
+062,06206,Paredones
+063,06301,San Fernando
+063,06302,Chépica
+063,06303,Chimbarongo
+063,06304,Lolol
+063,06305,Nancagua
+063,06306,Palmilla
+063,06307,Peralillo
+063,06308,Placilla
+063,06309,Pumanque
+063,06310,Santa Cruz
+071,07101,Talca
+071,07102,Constitución
+071,07103,Curepto
+071,07104,Empedrado
+071,07105,Maule
+071,07106,Pelarco
+071,07107,Pencahue
+071,07108,Río Claro
+071,07109,San Clemente
+071,07110,San Rafael
+072,07201,Cauquenes
+072,07202,Chanco
+072,07203,Pelluhue
+073,07301,Curicó
+073,07302,Hualañé
+073,07303,Licantén
+073,07304,Molina
+073,07305,Rauco
+073,07306,Romeral
+073,07307,Sagrada Familia
+073,07308,Teno
+073,07309,Vichuquén
+074,07401,Linares
+074,07402,Colbún
+074,07403,Longaví
+074,07404,Parral
+074,07405,Retiro
+074,07406,San Javier
+074,07407,Villa Alegre
+074,07408,Yerbas Buenas
+081,08101,Concepción
+081,08102,Coronel
+081,08103,Chiguayante
+081,08104,Florida
+081,08105,Hualqui
+081,08106,Lota
+081,08107,Penco
+081,08108,San Pedro de la Paz
+081,08109,Santa Juana
+081,08110,Talcahuano
+081,08111,Tomé
+081,08112,Hualpén
+082,08201,Lebu
+082,08202,Arauco
+082,08203,Cañete
+082,08204,Contulmo
+082,08205,Curanilahue
+082,08206,Los Álamos
+082,08207,Tirúa
+083,08301,Los Ángeles
+083,08302,Antuco
+083,08303,Cabrero
+083,08304,Laja
+083,08305,Mulchén
+083,08306,Nacimiento
+083,08307,Negrete
+083,08308,Quilaco
+083,08309,Quilleco
+083,08310,San Rosendo
+083,08311,Santa Bárbara
+083,08312,Tucapel
+083,08313,Yumbel
+083,08314,Alto Biobío
+084,08401,Chillán
+084,08402,Bulnes
+084,08403,Cobquecura
+084,08404,Coelemu
+084,08405,Coihueco
+084,08406,Chillán Viejo
+084,08407,El Carmen
+084,08408,Ninhue
+084,08409,Ñiquén
+084,08410,Pemuco
+084,08411,Pinto
+084,08412,Portezuelo
+084,08413,Quillón
+084,08414,Quirihue
+084,08415,Ránquil
+084,08416,San Carlos
+084,08417,San Fabián
+084,08418,San Ignacio
+084,08419,San Nicolás
+084,08420,Treguaco
+084,08421,Yungay
+091,09101,Temuco
+091,09102,Carahue
+091,09103,Cunco
+091,09104,Curarrehue
+091,09105,Freire
+091,09106,Galvarino
+091,09107,Gorbea
+091,09108,Lautaro
+091,09109,Loncoche
+091,09110,Melipeuco
+091,09111,Nueva Imperial
+091,09112,Padre las Casas
+091,09113,Perquenco
+091,09114,Pitrufquén
+091,09115,Pucón
+091,09116,Saavedra
+091,09117		Teodoro Schmidt
+091,09118		Toltén
+091,09119,Vilcún
+091,09120,Villarrica
+091,09121,Cholchol
+092,09201,Angol
+092,09202,Collipulli
+092,09203,Curacautín
+092,09204,Ercilla
+092,09205,Lonquimay
+092,09206,Los Sauces
+092,09207,Lumaco
+092,09208,Purén
+092,09209,Renaico
+092,09210,Traiguén
+092,09211,Victoria
+141,14101,Valdivia
+141,14102,Corral
+141,14103,Lanco
+141,14104,Los Lagos
+141,14105,Máfil
+141,14106,Mariquina
+141,14107,Paillaco
+141,14108,Panguipulli
+142,14201,La Unión
+142,14202,Futrono
+142,14203,Lago Ranco
+142,14204,Río Bueno
+101,10101,Puerto Montt
+101,10102,Calbuco
+101,10103,Cochamó
+101,10104,Fresia
+101,10105,Frutillar
+101,10106,Los Muermos
+101,10107,Llanquihue
+101,10108,Maullín
+101,10109,Puerto Varas
+102,10201,Castro
+102,10202,Ancud
+102,10203,Chonchi
+102,10204,Curaco de Vélez
+102,10205,Dalcahue
+102,10206,Puqueldón 
+102,10207,Queilén
+102,10208,Quellón
+102,10209,Quemchi
+102,10210,Quinchao
+103,10301,Osorno
+103,10302,Puerto Octay
+103,10303,Purranque
+103,10304,Puyehue
+103,10305,Río Negro
+103,10306,San Juan de la Costa
+103,10307,San Pablo
+104,10401,Chaitén
+104,10402,Futaleufú
+104,10403,Hualaihué
+104,10404,Palena
+111,11101,Coihaique
+111,11102,Lago Verde
+112,11201,Aisén	
+112,11202,Cisnes
+112,11203,Guaitecas
+113,11301,Cochrane
+113,11302,O’Higgins
+113,11303,Tortel
+114,11401,Chile Chico
+114,11402,Río Ibáñez	
+121,12101,Punta Arenas
+121,12102,Laguna Blanca
+121,12103,Río Verde
+121,12104,San Gregorio
+122,12201,Cabo de Hornos (Ex Navarino)
+122,12202,Antártica
+123,12301,Porvenir
+123,12302,Primavera
+123,12303,Timaukel
+124,12401,Natales
+124,12402,Torres del Paine
+131,13101,Santiago
+131,13102,Cerrillos
+131,13103,Cerro Navia
+131,13104,Conchalí
+131,13105,El Bosque
+131,13106,Estación Central
+131,13107,Huechuraba
+131,13108,Independencia
+131,13109,La Cisterna
+131,13110,La Florida
+131,13111,La Granja
+131,13112,La Pintana
+131,13113,La Reina
+131,13114,Las Condes
+131,13115,Lo Barnechea
+131,13116,Lo Espejo
+131,13117,Lo Prado
+131,13118,Macul
+131,13119,Maipú
+131,13120,Ñuñoa
+131,13121,Pedro Aguirre Cerda
+131,13122,Peñalolén
+131,13123,Providencia
+131,13124,Pudahuel
+131,13125,Quilicura
+131,13126,Quinta Normal
+131,13127,Recoleta
+131,13128,Renca
+131,13129,San Joaquín
+131,13130,San Miguel
+131,13131,San Ramón
+131,13132,Vitacura
+132,13201,Puente Alto
+132,13202,Pirque
+132,13203,San José de Maipo
+133,13301,Colina
+133,13302,Lampa
+133,13303,Tiltil
+134,13401,San Bernardo
+134,13402,Buin
+134,13403,Calera de Tango
+134,13404,Paine
+135,13501,Melipilla
+135,13502,Alhué
+135,13503,Curacaví
+135,13504,María Pinto
+135,13505,San Pedro
+136,13601,Talagante
+136,13602,El Monte
+136,13603,Isla de Maipo
+136,13604,Padre Hurtado
+136,13605,Peñaflor

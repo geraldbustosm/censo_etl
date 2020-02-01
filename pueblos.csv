@@ -1,0 +1,25 @@
+id,codigo,pueblo,listado
+1,1,Mapuche,listado
+2,2,Aymara,listado
+3,3,Rapa Nui,listado
+4,4,Lican Antai,listado
+5,5,Quechua,listado
+6,6,Colla,listado
+7,7,Diaguita,listado
+8,8,Kawésqar,listado
+9,9,Yagán o Yamana,listado
+10,10,Otro,listado
+11,3,Lafquenche,otro
+12,4,Pehuenche,otro
+13,5,Huilliche,otro
+14,6,Picunche,otro
+15,21,Changos,otro
+16,22,Chonos,otro
+17,23,Ona,otro
+18,28,Tehuelches,otro
+19,33,Pueblos de América Latina,otro
+20,34,Pueblos del resto del mundo,otro
+21,35,Afrodescendiente,otro
+22,37,Otros pueblos presentes en el territorio nacional,otro
+23,97,Pueblo no declarado,otro
+
