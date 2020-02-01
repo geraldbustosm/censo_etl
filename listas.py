@@ -1,10 +1,10 @@
 import pandas as pd
 
-# Lista de paises y pueblos se entregarán como (clave -> valor)
-# para poder hallar más facilmente el nombre del país  o pueblo
+# Lista de paises y pueblos se entregarán como clave -> valor
+# para poder hallar más facilmente el nombre del país o pueblo
 # antes de insertarlo a la base de datos.
 
-# Para las demas listas no es necesario clave valor, 
+# Para las demas listas no es necesario clave -> valor, 
 # pues se recorreran normalmente mediante su iteración ya que estas
 # si deben estar en la base de datos con su código.
 
@@ -53,4 +53,11 @@ def lista_provincias():
     return provincias
 
 def lista_regiones():
-    pass
+    regiones = {}
+    df = pd.read_csv('regiones.csv', sep=',')
+    for i in range(len(df['region'])):
+        regiones[i] = {
+                        'codigo_region' : df['codigo_region'][i],
+                        'region' : df['region'][i]
+                    }
+    return regiones
