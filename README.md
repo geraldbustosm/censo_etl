@@ -1,6 +1,18 @@
 # CENSO 2017 ETL
 Realización de un ETL (Extract, Transform and Load) a un archivo excel del CENSO 2017 desarrollado en Chile.
 
+Puedes descargar los archivos con este enlace:
+
+https://drive.google.com/file/d/1GCFewugVvQeJdoolM-vIzNNSzJvRxmWJ/view?usp=sharing
+
+Encontrarás 3 ficheros:
+
+1. Microdato_Censo2017-Personas.csv
+2. Manual-Usuario.pdf
+3. codigos_region_provincia_comuna.pdf
+
+El entendimiento de los datos se puede conocer a través del manual de usuario. Para una búsqueda más rápida y simple se adjunta este diccionario solo con las 48 columnas que se trabajaran dispuestas en el csv.
+
 # Diccionario CENSO 2017
 
 | Columna       | Descripción                                                  | Atributo                         | Rango                                        |
@@ -58,7 +70,7 @@ Realización de un ETL (Extract, Transform and Load) a un archivo excel del CENS
 
 # Modelo relacional
 
- Region					(**<u>codigo_region</u>**, region)
+Region					(**<u>codigo_region</u>**, region)
 
  Provincia				(<u>**codigo_provincia**</u>, provincia, *codigo_region*)
 
@@ -73,3 +85,8 @@ Realización de un ETL (Extract, Transform and Load) a un archivo excel del CENS
  Hogar					 (**<u>id_zonalocalidad,nviv,nhogar</u>**)
 
  Persona				 (**<u>id_zonalocalidad,nviv,nhogar,personan</u>**)
+
+---
+
+Entidad					(<u>**primary_key**</u>, atributo, *foreign_key*)
+
