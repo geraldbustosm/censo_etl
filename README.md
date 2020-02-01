@@ -1,7 +1,7 @@
 # CENSO 2017 ETL
 Realización de un ETL (Extract, Transform and Load) a un archivo excel del CENSO 2017 desarrollado en Chile.
 
-Puedes descargar los archivos con este enlace:
+Puedes descargar los archivos desde este enlace:
 
 https://drive.google.com/file/d/1GCFewugVvQeJdoolM-vIzNNSzJvRxmWJ/view?usp=sharing
 
@@ -17,9 +17,9 @@ El entendimiento de los datos se puede conocer a través del manual de usuario. 
 
 | Columna       | Descripción                                                  | Atributo                         | Rango                                        |
 | ------------- | ------------------------------------------------------------ | -------------------------------- | -------------------------------------------- |
-| REGION        | Región                                                       | region                           | 1 - 16                                       |
-| PROVINCIA     | Provincia                                                    | provincia                        | 11 - 163                                     |
-| COMUNA        | Comuna                                                       | comuna                           | 1101 - 16305                                 |
+| REGION        | Región                                                       | codigo_region                    | 1 - 16                                       |
+| PROVINCIA     | Provincia                                                    | codigo_provincia                 | 11 - 163                                     |
+| COMUNA        | Comuna                                                       | codigo_comuna                    | 1101 - 16305                                 |
 | DC            | Distrito                                                     | distrito                         | 1 - 99                                       |
 | AREA          | Área                                                         | area                             | 1 ó 2                                        |
 | ZC_LOC        | Zona/Localidad                                               | zona_localidad                   | 1 - 999                                      |
@@ -59,26 +59,26 @@ El entendimiento de los datos se puede conocer a través del manual de usuario. 
 | P12PAIS_GRUPO | País de nacimiento grupo                                     | pais_nacimiento_grupo            | 0 - 997 *(98 No aplica, 99 Missing)*         |
 | ESCOLARIDAD   | Años de escolaridad                                          | escolaridad                      | 0 - 21 *(98 No aplica, 99 Missing)*          |
 | P16A_GRUPO    | Pueblo indígena u originario grupo                           | pueblo_grupo                     | 1 - 10 *(98 No aplica, 99 Missing)*          |
-| REGION_15R    | Códigos de una región entre 01 y 15                          | region15r                        | 1 - 15                                       |
-| PROVINCIA_15R | Concatenación entre REGION15R y el código de la provincia    | prinvicia15r                     | 11 - 152                                     |
-| COMUNA_15R    | Concatenación entre PRONVICIA_15R y código de la comuna      | comuna15r                        | 1101 - 15202                                 |
-| P10COMUNA_15R | *Comuna de residencia habitual a 15 regiones*                | comuna_residencia_habitual_15r   |                                              |
-| P11COMUNA_15R | *Comuna de residencia hace 5 años a 15 regiones*             | comuna_residencia_hace_5años_15r |                                              |
-| P12COMUNA_15R | *Comuna de nacimiento a 15 regiones*                         | comuna_nacimiento_15r            |                                              |
+| REGION_15R    | Códigos de una región entre 01 y 15                          | codigo_region15r                 | 1 - 15                                       |
+| PROVINCIA_15R | Concatenación entre REGION15R y el código de la provincia    | codigo_provincia15r              | 11 - 152                                     |
+| COMUNA_15R    | Concatenación entre PRONVICIA_15R y código de la comuna      | codigo_comuna15r                 | 1101 - 15202                                 |
+| P10COMUNA_15R | *Comuna de residencia habitual a 15 regiones*                | comuna_residencia_habitual_15r   | 1101 - 15202                                 |
+| P11COMUNA_15R | *Comuna de residencia hace 5 años a 15 regiones*             | comuna_residencia_hace_5años_15r | 1101 - 15202                                 |
+| P12COMUNA_15R | *Comuna de nacimiento a 15 regiones*                         | comuna_nacimiento_15r            | 1101 - 15202                                 |
 # Diagrama entidad-relación
 ![CENSO DER](https://raw.githubusercontent.com/geraldbustosm/censo_etl/master/censo.png)
 
 # Modelo relacional
 
-Region					(**<u>codigo_region</u>**, region, region15r)
+Region					(**<u>codigo_region</u>**, region, codigo_region15r)
 
-Provincia				(<u>**codigo_provincia**</u>, provincia, provincia15r, *codigo_region*)
+Provincia				(<u>**codigo_provincia**</u>, provincia, codigo_provincia15r, *codigo_region*)
 
-Comuna				 (**<u>codigo_comuna</u>**, comuna, comuna15r, *codigo_provincia*)
+Comuna				 (**<u>codigo_comuna</u>**, comuna, codigo_comuna15r, *codigo_provincia*, *id_distrito*)
 
-Distrito				   (**<u>id</u>**, area)
+Distrito				   (**<u>id_distrito</u>**, area)
 
-ZonaLocalidad	  (**<u>id_zonalocalidad</u>**, zona_localidad)
+ZonaLocalidad	  (**<u>id_zonalocalidad</u>**, zona_localidad, *id_distrito*)
 
 Vivienda				 (**<u>id_zonalocalidad,nviv</u>**)
 
@@ -89,4 +89,3 @@ Persona				 (**<u>id_zonalocalidad,nviv,nhogar,personan</u>**, atributos)
 ---
 
 Entidad					(<u>**primary_key**</u>, atributo, *foreign_key*)
-
