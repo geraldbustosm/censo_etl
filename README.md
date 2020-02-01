@@ -56,4 +56,20 @@ Realización de un ETL (Extract, Transform and Load) a un archivo excel del CENS
 # Diagrama entidad-relación
 ![CENSO DER](https://raw.githubusercontent.com/geraldbustosm/censo_etl/master/censo.png)
 
+# Modelo relacional
 
+ Region					(**<u>codigo_region</u>**, region)
+
+ Provincia				(<u>**codigo_provincia**</u>, provincia, *codigo_region*)
+
+ Comuna				 (**<u>codigo_comuna</u>**, comuna, *codigo_provincia*)
+
+ Distrito				   (**<u>id</u>**, area)
+
+ ZonaLocalidad	  (**<u>id_zonalocalidad</u>**, zona_localidad)
+
+ Vivienda				 (**<u>id_zonalocalidad,nviv</u>**)
+
+ Hogar					 (**<u>id_zonalocalidad,nviv,nhogar</u>**)
+
+ Persona				 (**<u>id_zonalocalidad,nviv,nhogar,personan</u>**)
