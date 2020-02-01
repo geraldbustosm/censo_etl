@@ -70,21 +70,21 @@ El entendimiento de los datos se puede conocer a través del manual de usuario. 
 
 # Modelo relacional
 
-Region					(**<u>codigo_region</u>**, region)
+Region					(**<u>codigo_region</u>**, region, region15r)
 
- Provincia				(<u>**codigo_provincia**</u>, provincia, *codigo_region*)
+Provincia				(<u>**codigo_provincia**</u>, provincia, provincia15r, *codigo_region*)
 
- Comuna				 (**<u>codigo_comuna</u>**, comuna, *codigo_provincia*)
+Comuna				 (**<u>codigo_comuna</u>**, comuna, comuna15r, *codigo_provincia*)
 
- Distrito				   (**<u>id</u>**, area)
+Distrito				   (**<u>id</u>**, area)
 
- ZonaLocalidad	  (**<u>id_zonalocalidad</u>**, zona_localidad)
+ZonaLocalidad	  (**<u>id_zonalocalidad</u>**, zona_localidad)
 
- Vivienda				 (**<u>id_zonalocalidad,nviv</u>**)
+Vivienda				 (**<u>id_zonalocalidad,nviv</u>**)
 
- Hogar					 (**<u>id_zonalocalidad,nviv,nhogar</u>**)
+Hogar					 (**<u>id_zonalocalidad,nviv,nhogar</u>**)
 
- Persona				 (**<u>id_zonalocalidad,nviv,nhogar,personan</u>**)
+Persona				 (**<u>id_zonalocalidad,nviv,nhogar,personan</u>**, atributos)
 
 ---
 
