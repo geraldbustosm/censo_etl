@@ -53,7 +53,7 @@ Realización de un ETL (Extract, Transform and Load) a un archivo excel del CENS
 | P10COMUNA_15R | *Comuna de residencia habitual a 15 regiones*                | comuna_residencia_habitual_15r   |                                              |
 | P11COMUNA_15R | *Comuna de residencia hace 5 años a 15 regiones*             | comuna_residencia_hace_5años_15r |                                              |
 | P12COMUNA_15R | *Comuna de nacimiento a 15 regiones*                         | comuna_nacimiento_15r            |                                              |
-# DIAGRAMA ENTIDAD-RELACIÓN
+# Diagrama entidad-relación
 ![CENSO DER](https://raw.githubusercontent.com/geraldbustosm/censo_etl/master/censo.png)
 
 
