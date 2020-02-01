@@ -1,5 +1,13 @@
 import pandas as pd
 
+# Lista de paises y pueblos se entregarán como (clave -> valor)
+# para poder hallar más facilmente el nombre del país  o pueblo
+# antes de insertarlo a la base de datos.
+
+# Para las demas listas no es necesario clave valor, 
+# pues se recorreran normalmente mediante su iteración ya que estas
+# si deben estar en la base de datos con su código.
+
 def lista_paises():
     paises = {}
     df = pd.read_csv('paises.csv', sep=',')
@@ -26,14 +34,23 @@ def lista_comunas():
     comunas = {}
     df = pd.read_csv('comunas.csv', sep=',')
     for i in range(len(df['comuna'])):
-        comunas[df['codigo_comuna'][i]] = {
-                                        'comuna' : df['comuna'][i],
-                                        'codigo_provincia' : df['codigo_provincia'][i]
-                                        }
+        comunas[i] = {
+                        'codigo_comuna' : df['codigo_comuna'][i],
+                        'comuna' : df['comuna'][i],
+                        'codigo_provincia' : df['codigo_provincia'][i]
+                    }
     return comunas
 
 def lista_provincias():
-    pass
+    provincias = {}
+    df = pd.read_csv('provincias.csv', sep=',')
+    for i in range(len(df['provincia'])):
+        provincias[i] = {
+                            'codigo_provincia' : df['codigo_provincia'][i],
+                            'provincia' : df['provincia'][i],
+                            'codigo_region' : df['codigo_region'][i]
+                        }
+    return provincias
 
 def lista_regiones():
     pass
