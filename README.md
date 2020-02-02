@@ -33,9 +33,9 @@ El entendimiento de los datos se puede conocer a través del manual de usuario. 
 | P10           | Residencia habitual                                          | residencia_habitual              | 1 - 4 *(98 No aplica, 99 Missing)*           |
 | P10COMUNA     | Comuna de residencia habitual                                | comuna_residencia_habitual       | 997 - 15202 *(98 No aplica, 99 Missing)*     |
 | P10PAIS       | País de residencia habitual                                  | pais_residencia_habitual         | 0 - 997 *(998 No aplica, 999 Missing)*       |
-| P11           | Residencia hace 5 años                                       | residencia_5años                 | 1 - 9 *(98 No aplica, 99 Missing)*           |
-| P11COMUNA     | Comuna de residencia hace 5 años                             | comuna_residencia_5años          | 997 - 15202 *(98 No aplica, 99 Missing)*     |
-| P11PAIS       | País de residencia hace 5 años                               | pais_residencia_5años            | 0 - 997 *(998 No aplica, 999 Missing)*       |
+| P11           | Residencia hace 5 años                                       | residencia_hace_5años            | 1 - 9 *(98 No aplica, 99 Missing)*           |
+| P11COMUNA     | Comuna de residencia hace 5 años                             | comuna_residencia_hace_5años     | 997 - 15202 *(98 No aplica, 99 Missing)*     |
+| P11PAIS       | País de residencia hace 5 años                               | pais_residencia_hace_5años       | 0 - 997 *(998 No aplica, 999 Missing)*       |
 | P12           | Lugar de nacimiento                                          | lugar_nacimiento                 | 1 - 8 *(98 No aplica, 99 Missing)*           |
 | P12COMUNA     | Comuna de nacimiento                                         | comuna_nacimiento                | 997 - 15202 *(98 No aplica, 99 Missing)*     |
 | P12PAIS       | País de nacimiento                                           | pais_nacimiento                  | 0 - 997 *(998 No aplica, 999 Missing)*       |
