@@ -28,7 +28,7 @@ CREATE TABLE comuna(
 );
 
 CREATE TABLE zonalocalidad(
-    id_zonalocalidad INTEGER PRIMAR KEY,
+    id_zonalocalidad INTEGER PRIMARY KEY,
     zona_localidad INTEGER,
     id_distrito INTEGER,
     FOREIGN KEY (id_distrito) REFERENCES distrito(id_distrito)
@@ -45,9 +45,8 @@ CREATE TABLE hogar(
     id_zonalocalidad INTEGER,
     nviv INTEGER,
     nhogar INTEGER,
-    PRIMARY KEY (id_distrito, nviv, nhogar),
-    FOREIGN KEY (id_zonalocalidad) REFERENCES vivienda(id_zonalocalidad),
-    FOREIGN KEY (nviv) REFERENCES vivienda(nviv)
+    PRIMARY KEY (id_zonalocalidad, nviv, nhogar),
+    FOREIGN KEY (id_zonalocalidad, nviv) REFERENCES vivienda(id_zonalocalidad, nviv)
 );
 
 CREATE TABLE persona(
@@ -90,7 +89,5 @@ CREATE TABLE persona(
     comuna_residencia_hace_5años_15r VARCHAR(50),
     comuna_nacimiento_15r VARCHAR(50),
     PRIMARY KEY (id_zonalocalidad, nviv, nhogar, personan),
-    FOREIGN KEY (id_zonalocalidad) REFERENCES hogar(id_distrito),
-    FOREIGN KEY (nviv) REFERENCES hogar(nviv),
-    FOREIGN KEY (nhogar) REFERENCES hogar(nhogar)
+    FOREIGN KEY (id_zonalocalidad, nviv, nhogar) REFERENCES hogar(id_zonalocalidad,nviv,nhogar)
 );
