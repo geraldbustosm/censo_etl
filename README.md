@@ -76,9 +76,11 @@ Provincia				(<u>**codigo_provincia**</u>, provincia, codigo_provincia15r, *codi
 
 Comuna				 (**<u>codigo_comuna</u>**, comuna, codigo_comuna15r, *codigo_provincia*, *id_distrito*)
 
-Distrito				   (**<u>id_distrito</u>**, area)
+Distrito				   (**<u>id_distrito</u>**)
 
-ZonaLocalidad	  (**<u>id_zonalocalidad</u>**, zona_localidad, *id_distrito*)
+ComunaDistrito	(**<u>codigo_comuna,id_distrito</u>**)
+
+ZonaLocalidad	  (**<u>id_zonalocalidad</u>**, zona_localidad, area, *id_distrito*)
 
 Vivienda				 (**<u>id_zonalocalidad,nviv</u>**)
 
@@ -89,3 +91,9 @@ Persona				 (**<u>id_zonalocalidad,nviv,nhogar,personan</u>**, atributos)
 ---
 
 Entidad					(<u>**primary_key**</u>, atributo, *foreign_key*)
+
+# Anotaciones
+* Atributo: Region15R mantiene el mismo código para la región, sin embargo, para la región 16 se cambia a 8
+* Tabla: Distrito es rellenado mediante la lectura de Microdato_Censo2017-Personas.csv
+* Archivos: Paises.csv y Pueblos.csv servirán principalmente para poner el nombre del país o pueblo
+directamente y no el código
