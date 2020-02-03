@@ -93,5 +93,6 @@ Persona				 (**<u>id_zonalocalidad,nviv,nhogar,personan</u>**, atributos)
 Entidad					(<u>**primary_key**</u>, atributo, *foreign_key*)
 
 # Anotaciones
-* Atributo: Region15R mantiene el mismo código para la región, sin embargo, para la región 16 se cambia a 8.
-* Archivos: Paises.csv y Pueblos.csv servirán para poner el nombre del país o pueblo directamente en la tabla Persona y no el código del país o pueblo.
+* Region15R mantiene el mismo código de región, sin embargo, para la región 16 se cambia a 8.
+* Todos los archivos .csv, excepto *Microdatos-Censo2017.csv*, se generaron utilizando este ultimo a través de Pandas.
+* Se obtuvieron estos archivos para rellenar algunas tablas , puesto que otras se rellanaran mediante Microdatos-Censo2017.csv directamente.
