@@ -76,11 +76,11 @@ Provincia				(<u>**codigo_provincia**</u>, provincia, codigo_provincia15r, *codi
 
 Comuna				 (**<u>codigo_comuna</u>**, comuna, codigo_comuna15r, *codigo_provincia*)
 
-Distrito				   (**<u>id_distrito</u>**)
+Distrito				   (**<u>codigo_distrito</u>**)
 
-ComunaDistrito	(**<u>codigo_comuna,id_distrito</u>**)
+ComunaDistrito	(**<u>codigo_comuna,codigo_distrito</u>**)
 
-ZonaLocalidad	  (**<u>id_zonalocalidad</u>**, zona_localidad, area, *id_distrito*)
+ZonaLocalidad	  (**<u>id_zonalocalidad</u>**, zona_localidad, area, *codigo_distrito*)
 
 Vivienda				 (**<u>id_zonalocalidad,nviv</u>**)
 
