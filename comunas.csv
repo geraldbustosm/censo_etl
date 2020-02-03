@@ -1,4 +1,3 @@
-
 codigo_provincia,codigo_comuna,comuna
 151,15101,Arica
 151,15102,Camarones
@@ -215,8 +214,8 @@ codigo_provincia,codigo_comuna,comuna
 091,09114,Pitrufquén
 091,09115,Pucón
 091,09116,Saavedra
-091,09117		Teodoro Schmidt
-091,09118		Toltén
+091,09117,Teodoro Schmidt
+091,09118,Toltén
 091,09119,Vilcún
 091,09120,Villarrica
 091,09121,Cholchol
