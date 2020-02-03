@@ -34,6 +34,7 @@ CREATE TABLE zonalocalidad(
     id_zonalocalidad INTEGER PRIMARY KEY,
     zona_localidad INTEGER,
     codigo_distrito INTEGER,
+    area INTEGER,
     FOREIGN KEY (codigo_distrito) REFERENCES distrito(codigo_distrito)
 );
 
