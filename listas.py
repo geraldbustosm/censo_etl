@@ -59,16 +59,6 @@ def distritos():
     distritos.append(99)
     return distritos
 
-def comunadistrito():
-    comunadistrito = {}
-    df = pd.read_csv('comunadistrito.csv')
-    for i in range(len(df['codigo_comuna'])):
-        comunadistrito[i] = {
-                            'codigo_comuna'   : df['codigo_comuna'][i].item(),
-                            'codigo_distrito' : df['codigo_distrito'][i].item()
-        }
-    return comunadistrito
-
 def pueblos():
     pueblos = {}
     df = pd.read_csv('pueblos.csv')
