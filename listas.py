@@ -8,7 +8,7 @@ import pandas as pd
 # pues se recorreran normalmente mediante su iteración ya que estas
 # si deben estar en la base de datos con su código.
 
-def lista_paises():
+def paises():
     paises = {}
     df = pd.read_csv('paises.csv', sep=',')
     for i in range(len(df['codigo'])):
@@ -19,7 +19,7 @@ def lista_paises():
                                     }
     return paises
 
-def lista_pueblos():
+def pueblos():
     pueblos = {}
     df = pd.read_csv('pueblos.csv')
     for i in range(len(df['pueblo'])):
@@ -30,33 +30,40 @@ def lista_pueblos():
         }
     return pueblos
 
-def lista_comunas():
+def comunas():
     comunas = {}
     df = pd.read_csv('comunas.csv', sep=',')
     for i in range(len(df['comuna'])):
         comunas[df['codigo_comuna'][i]] = {
                         'comuna' : df['comuna'][i],
-                        'codigo_provincia' : df['codigo_provincia'][i]
+                        'codigo_provincia' : df['codigo_provincia'][i].item()
                     }
     return comunas
 
-def lista_provincias():
+def provincias():
     provincias = {}
     df = pd.read_csv('provincias.csv', sep=',')
     for i in range(len(df['provincia'])):
         provincias[i] = {
-                            'codigo_provincia' : df['codigo_provincia'][i],
+                            'codigo_provincia' : df['codigo_provincia'][i].item(),
                             'provincia' : df['provincia'][i],
-                            'codigo_region' : df['codigo_region'][i]
+                            'codigo_region' : df['codigo_region'][i].item()
                         }
     return provincias
 
-def lista_regiones():
+def regiones():
     regiones = {}
     df = pd.read_csv('regiones.csv', sep=',')
     for i in range(len(df['region'])):
         regiones[i] = {
-                        'codigo_region' : df['codigo_region'][i],
-                        'region' : df['region'][i]
+                        'codigo_region' : df['codigo_region'][i].item(),
+                        'region' : df['region'][i],
+                        'codigo_region15r' : df['codigo_region15r'][i].item()
                     }
     return regiones
+
+def distritos():
+    distritos = []
+    for i in range(28):
+        distritos.append(i+1)
+    return distritos
