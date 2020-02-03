@@ -74,7 +74,7 @@ Region					(**<u>codigo_region</u>**, region, codigo_region15r)
 
 Provincia				(<u>**codigo_provincia**</u>, provincia, codigo_provincia15r, *codigo_region*)
 
-Comuna				 (**<u>codigo_comuna</u>**, comuna, codigo_comuna15r, *codigo_provincia*, *id_distrito*)
+Comuna				 (**<u>codigo_comuna</u>**, comuna, codigo_comuna15r, *codigo_provincia*)
 
 Distrito				   (**<u>id_distrito</u>**)
 
@@ -93,7 +93,5 @@ Persona				 (**<u>id_zonalocalidad,nviv,nhogar,personan</u>**, atributos)
 Entidad					(<u>**primary_key**</u>, atributo, *foreign_key*)
 
 # Anotaciones
-* Atributo: Region15R mantiene el mismo código para la región, sin embargo, para la región 16 se cambia a 8
-* Tabla: Distrito es rellenado mediante la lectura de Microdato_Censo2017-Personas.csv
-* Archivos: Paises.csv y Pueblos.csv servirán principalmente para poner el nombre del país o pueblo
-directamente y no el código
+* Atributo: Region15R mantiene el mismo código para la región, sin embargo, para la región 16 se cambia a 8.
+* Archivos: Paises.csv y Pueblos.csv servirán para poner el nombre del país o pueblo directamente en la tabla Persona y no el código del país o pueblo.
