@@ -41,7 +41,6 @@ CREATE TABLE zonalocalidad(
 CREATE TABLE vivienda(
     id_zonalocalidad INTEGER,
     nviv INTEGER,
-    area INTEGER,
     PRIMARY KEY (id_zonalocalidad, nviv),
     FOREIGN KEY (id_zonalocalidad) REFERENCES zonalocalidad(id_zonalocalidad)
 );
