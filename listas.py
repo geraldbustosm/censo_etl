@@ -40,6 +40,23 @@ def comunas():
                     }
     return comunas
 
+def distritos():
+    distritos = []
+    for i in range(33):
+        distritos.append(i+1)
+    distritos.append(99)
+    return distritos
+
+def comunadistrito():
+    comunadistrito = {}
+    df = pd.read_csv('comunadistrito.csv')
+    for i in range(len(df['codigo_comuna'])):
+        comunadistrito[i] = {
+                            'codigo_comuna' : df['codigo_comuna'][i],
+                            'codigo_distrito' : df['codigo_distrito'][i]
+        }
+    return comunadistrito
+
 def provincias():
     provincias = {}
     df = pd.read_csv('provincias.csv', sep=',')
@@ -61,9 +78,3 @@ def regiones():
                         'codigo_region15r' : df['codigo_region15r'][i].item()
                     }
     return regiones
-
-def distritos():
-    distritos = []
-    for i in range(28):
-        distritos.append(i+1)
-    return distritos
