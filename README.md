@@ -94,5 +94,5 @@ Entidad					(<u>**primary_key**</u>, atributo, *foreign_key*)
 
 # Anotaciones
 * Region15R mantiene el mismo código de región, sin embargo, para la región 16 se cambia a 8.
-* Todos los archivos .csv, excepto *Microdatos-Censo2017.csv*, se generaron utilizando este ultimo a través de Pandas.
-* Se obtuvieron estos archivos para rellenar algunas tablas , puesto que otras se rellanaran mediante Microdatos-Censo2017.csv directamente.
+* Se decidió generar con la ayuda de Pandas paises.csv, regiones.csv, provincias.csv, comunas.csv y pueblos.csv para luego agregar una columna extra que tuviese el nombre de cada entidad. Esto se hizo de manera un tanto "manual" puesto que esa información no estaba contemplada en *Microdato-Censo2017.csv*, sino que en *Manual_Usuario.pdf*.
+
