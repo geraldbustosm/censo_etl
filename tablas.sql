@@ -13,8 +13,7 @@ CREATE TABLE provincia(
 );
 
 CREATE TABLE distrito(
-    id_distrito INTEGER PRIMARY KEY,
-    area INTEGER
+    codigo_distrito INTEGER PRIMARY KEY
 );
 
 CREATE TABLE comuna(
@@ -22,21 +21,26 @@ CREATE TABLE comuna(
     comuna VARCHAR(50),
     codigo_comuna15r INTEGER,
     codigo_provincia INTEGER,
-    id_distrito INTEGER,
-    FOREIGN KEY (codigo_provincia) REFERENCES provincia(codigo_provincia),
-    FOREIGN KEY (id_distrito) REFERENCES distrito(id_distrito)
+    FOREIGN KEY (codigo_provincia) REFERENCES provincia(codigo_provincia)
+);
+
+CREATE TABLE comunadistrito(
+    codigo_comuna INTEGER,
+    codigo_distrito INTEGER,
+    PRIMARY KEY (codigo_comuna, codigo_distrito)
 );
 
 CREATE TABLE zonalocalidad(
     id_zonalocalidad INTEGER PRIMARY KEY,
     zona_localidad INTEGER,
-    id_distrito INTEGER,
-    FOREIGN KEY (id_distrito) REFERENCES distrito(id_distrito)
+    codigo_distrito INTEGER,
+    FOREIGN KEY (codigo_distrito) REFERENCES distrito(codigo_distrito)
 );
 
 CREATE TABLE vivienda(
     id_zonalocalidad INTEGER,
     nviv INTEGER,
+    area INTEGER,
     PRIMARY KEY (id_zonalocalidad, nviv),
     FOREIGN KEY (id_zonalocalidad) REFERENCES zonalocalidad(id_zonalocalidad)
 );
