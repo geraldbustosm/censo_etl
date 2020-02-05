@@ -82,6 +82,7 @@ CREATE TABLE persona(
     trabajo_semana_pasada VARCHAR(50),
     rama_actividad_economica VARCHAR(50),
     total_hijos_nacidos_vivos INTEGER,
+    total_hijos_actualmente_vivos INTEGER,
     mes_nacimiento_ultimo_hijo VARCHAR(50),
     año_nacimiento_ultimo_hijo INTEGER,
     pais_residencia_habitual_grupo VARCHAR(50),
@@ -92,6 +93,6 @@ CREATE TABLE persona(
     comuna_residencia_habitual_15r VARCHAR(50),
     comuna_residencia_hace_5años_15r VARCHAR(50),
     comuna_nacimiento_15r VARCHAR(50),
-    PRIMARY KEY (id_zonalocalidad, nviv, nhogar, personan),
-    FOREIGN KEY (id_zonalocalidad, nviv, nhogar) REFERENCES hogar(id_zonalocalidad,nviv,nhogar)
+    PRIMARY KEY (id_zonalocalidad, nviv, nhogar, personan)
+    --FOREIGN KEY (id_zonalocalidad, nviv, nhogar) REFERENCES hogar(id_zonalocalidad,nviv,nhogar)
 );
