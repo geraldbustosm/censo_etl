@@ -54,9 +54,9 @@ El entendimiento de los datos se puede conocer a través del manual de usuario. 
 | P20           | Total hijos/as actualmente vivos                             | total_hijos_actualmente_vivos    | 0 - 23 *(98 No aplica, 99 Missing)*          |
 | P21M          | Mes de nacimiento del último/a hijo/a                        | mes_nacimiento_ultimo_hijo       | 1 - 12 *(98 No aplica, 99 Missing)*          |
 | P21A          | Año de nacimiento del último/a hijo/a                        | año_nacimiento_ultimo_hijo       | 1890 - 2017 *(98 No aplica, 99 Missing)*     |
-| P10PAIS_GRUPO | País de residencia habitual grupo                            | pais_recidencia_habitual_grupo   | 0 - 997 *(98 No aplica, 99 Missing)*         |
-| P11PAIS_GRUPO | País de residencia hace 5 años grupo                         | pais_residencia_hace_5años_grupo | 0 - 997 *(98 No aplica, 99 Missing)*         |
-| P12PAIS_GRUPO | País de nacimiento grupo                                     | pais_nacimiento_grupo            | 0 - 997 *(98 No aplica, 99 Missing)*         |
+| P10PAIS_GRUPO | País de residencia habitual grupo                            | pais_recidencia_habitual_grupo   | 0 - 997 *(998 No aplica, 999 Missing)*       |
+| P11PAIS_GRUPO | País de residencia hace 5 años grupo                         | pais_residencia_hace_5años_grupo | 0 - 997 *(998 No aplica, 999 Missing)*       |
+| P12PAIS_GRUPO | País de nacimiento grupo                                     | pais_nacimiento_grupo            | 0 - 997 *(998 No aplica, 999 Missing)*       |
 | ESCOLARIDAD   | Años de escolaridad                                          | escolaridad                      | 0 - 21 *(98 No aplica, 99 Missing)*          |
 | P16A_GRUPO    | Pueblo indígena u originario grupo                           | pueblo_grupo                     | 1 - 10 *(98 No aplica, 99 Missing)*          |
 | REGION_15R    | Códigos de una región entre 01 y 15                          | codigo_region15r                 | 1 - 15                                       |
@@ -94,7 +94,19 @@ Entidad					(<u>**primary_key**</u>, atributo, *foreign_key*)
 
 # Anotaciones
 * Region15R mantiene el mismo código de región, sin embargo, para la región 16 se cambia a 8.
-* Se decidió generar con la ayuda de Pandas paises.csv, regiones.csv, provincias.csv, comunas.csv y pueblos.csv para luego agregar una columna extra que tuviese el nombre de cada entidad. Esto se hizo de manera un tanto "manual" puesto que esa información no estaba contemplada en *Microdato-Censo2017.csv*, sino que en *Manual_Usuario.pdf*.
+
+* Se decidió generar diccionarios y listas dentro del modulo resources.py para acceder fácilmente a ellos a través de clave : valor en nuestro script principal.
+
+  Se agregó una columna extra que tuviese el nombre relacionado al código.
+  
+  Por ejemplo, en parentesco solo existe el código 1 pero no su descripción, por tanto se agregó la descripción quedando el diccionario de la siguiente forma:
+  
+  `{1 : Jefe/a de hogar}`
+  
+  Esto se hizo de manera un tanto "manual" puesto que esa información no estaba contemplada en *Microdato-Censo2017.csv*, sino que en *Manual_Usuario.pdf*.
+  
 * Se decidió acceder una sola vez a *Microdato-Censo2017.csv*, con esto se obtuvieron las tuplas necesarias y únicas para cada tabla (utilizando drop_duplicates(), consiguiendo así evitar múltiples consultas a la base de datos para saber si un registro ya existía o no). 
-* Se decidió no declarar las llaves foráneas de la tabla Persona, puesto que al recorrer *Microdato-Censo2017.csv* aún faltaban que se insertasen las tuplas de las demás tablas, estas tuplas tendrían los campos que iban a ser llaves foráneas de Persona. Por ende, veríamos en Persona un error que indicaría que la llave foránea que tenemos la tupla a insertar no existe en la otra tabla.
+
+* Se decidió no declarar las llaves foráneas de la tabla Persona, puesto que al recorrer *Microdato-Censo2017.csv* aún faltaban que se insertasen las tuplas de las demás tablas, estas tuplas tendrían los campos que iban a ser llaves foráneas de Persona. Por ende, veríamos un error en la tabla Persona que indicaría que la llave foránea de la tupla a insertar no existe en la otra tabla.
+
 * Se decidió no eliminar duplicados para Persona, puesto que cada tupla de *Microdato-Censo2017.csv* representa una persona en la población censada (y por ende, son todas distintas). Por otra parte, el costo en memoria de concatenar 17 millones de tuplas y luego eliminar sus posibles duplicados se hace muy costoso, arrojando *Memory Error*. Es por esto que al recorrer el archivo, se va insertando inmediatamente en la tabla Persona.
