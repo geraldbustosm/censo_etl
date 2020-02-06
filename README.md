@@ -1,5 +1,5 @@
 # CENSO 2017 ETL
-Realización de un ETL (Extract, Transform and Load) a un archivo excel del CENSO 2017 desarrollado en Chile.
+Realización de un ETL (Extract, Transform and Load) a un archivo csv del CENSO 2017 desarrollado en Chile.
 
 Puedes descargar los archivos desde este enlace:
 
@@ -82,10 +82,6 @@ ComunaDistrito	(**<u>codigo_comuna,codigo_distrito</u>**)
 
 ZonaLocalidad	  (**<u>id_zonalocalidad</u>**, zona_localidad, area, *codigo_distrito*)
 
-Vivienda				 (**<u>id_zonalocalidad,nviv</u>**)
-
-Hogar					 (**<u>id_zonalocalidad,nviv,nhogar</u>**)
-
 Persona				 (**<u>id_zonalocalidad,nviv,nhogar,personan</u>**, atributos)
 
 ---
@@ -95,7 +91,7 @@ Entidad					(<u>**primary_key**</u>, atributo, *foreign_key*)
 # Anotaciones
 * Region15R mantiene el mismo código de región, sin embargo, para la región 16 se cambia a 8.
 
-* Las comunas que comiencen con 16xxx no serán almacenadas en la base de datos, puesto que estas ya están pero con otro código (08xxx). Sin embargo, la almacenaremos en un diccionario para saber directamente el nombre de dicha comuna.
+* Las comunas que comiencen con `16xxx` no serán almacenadas en la base de datos, puesto que estas ya están pero con otro código `08xxx`. Sin embargo, la almacenaremos en un diccionario para saber directamente el nombre de dicha comuna.
 
 * Se decidió generar diccionarios y listas dentro del modulo *resources.py* para acceder fácilmente a ellos mediante clave : valor en nuestro script principal *censo.py*.
 
@@ -103,7 +99,7 @@ Entidad					(<u>**primary_key**</u>, atributo, *foreign_key*)
   
   Por ejemplo, en parentesco solo existe el código 1 pero no su descripción, por tanto se agregó la descripción quedando el diccionario de la siguiente forma:
   
-  `{1 : Jefe/a de hogar}`
+  `{1 : 'Jefe/a de hogar'}`
   
   Esto se hizo de manera un tanto "manual" puesto que esa información no estaba contemplada en *Microdato-Censo2017.csv*, sino que en *Manual_Usuario.pdf*.
   
