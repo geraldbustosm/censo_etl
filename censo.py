@@ -33,8 +33,6 @@ tf = pd.read_csv('C://Users//Gerald//Documents//Proyecto Analítico//CENSO//Recu
 # Arreglos para almacenar en cada item un chunk sin duplicados (dataframe)
 comunadistrito = []
 zonalocalidad = []
-viviendas = []
-hogar = []
 
 # Recorrido del archivo con obtención de tuplas únicas (utilizando drop_duplicates) según lo que necesite cada tabla.
 # Estas serán utilizadas posteriormente para insertarse.
@@ -45,8 +43,6 @@ print("- Comienza el recorrido de Microdato-Censo2017.csv ⏳")
 for chunk in tf:
     comunadistrito.append(chunk[['COMUNA', 'DC']].drop_duplicates())
     zonalocalidad.append(chunk[['ID_ZONA_LOC', 'ZC_LOC', 'AREA', 'DC']].drop_duplicates(subset=['ID_ZONA_LOC']))
-    viviendas.append(chunk[['ID_ZONA_LOC', 'NVIV']].drop_duplicates())
-    hogar.append(chunk[['ID_ZONA_LOC', 'NVIV', 'NHOGAR']].drop_duplicates())
 
     for index, row in chunk.iterrows():
         sql = 'INSERT INTO PERSONA VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'
@@ -59,8 +55,6 @@ print('-- Se insertaron todas las tuplas en la tabla Persona 🕺')
 # Se concatenan los dataframes almacenados en el arreglo y se vuelven a eliminar los duplicados
 comunadistrito = pd.concat(comunadistrito).drop_duplicates()
 zonalocalidad = pd.concat(zonalocalidad).drop_duplicates(subset=['ID_ZONA_LOC'])
-viviendas = pd.concat(viviendas).drop_duplicates()
-hogar = pd.concat(hogar).drop_duplicates()
 
 print('-Comienza la inserción en el resto de tablas ⏳')
 
@@ -82,7 +76,7 @@ print('-- Se insertó en provincia 🌄')
 
 # Insertando información base: Comunas
 for key in comunas:
-    if(comunas[key]['codigo_provincia'] == 98): break
+    if(key== 98): break
     sql = 'INSERT INTO COMUNA VALUES(%s, %s, %s, %s)'
     values = (key, comunas[key]['comuna'], key, comunas[key]['codigo_provincia'])
     cursor.execute(sql, values)
@@ -106,25 +100,10 @@ for index, row in comunadistrito.iterrows():
 print('-- Se insertó en comunadistritos 🌞')
 
 # Insertando información base: ZonaLocalidad
+print('Se van a insertar ', zonalocalidad)
 for index, row in zonalocalidad.iterrows():
     sql = 'INSERT INTO ZONALOCALIDAD VALUES(%s, %s, %s, %s)'
     values = (row['ID_ZONA_LOC'].item(), row['ZC_LOC'].item(), row['DC'].item(), row['AREA'].item())
     cursor.execute(sql, values)
     connection.commit()
 print('-- Se insertó en zonalocalidad 🌎')
-
-# Insertando información base: Viviendas
-for index, row in viviendas.iterrows():
-    sql = 'INSERT INTO VIVIENDA VALUES(%s, %s)'
-    values = (row['ID_ZONA_LOC'].item(), row['NVIV'].item())
-    cursor.execute(sql, values)
-    connection.commit()
-print('-- Se insertó en vivienda 🏠')
-
-# Insertando información base: Hogar
-for index, row in hogar.iterrows():
-    sql = 'INSERT INTO HOGAR(%s, %s, %s)'
-    values = (row['ID_ZONA_LOC'].item(), row['NVIV'].item(), row['NHOGAR'].item())
-    cursor.execute(sql, values)
-    connection.commit()
-print('-- Se inserto en hogar 💗')
