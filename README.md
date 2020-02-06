@@ -95,7 +95,9 @@ Entidad					(<u>**primary_key**</u>, atributo, *foreign_key*)
 # Anotaciones
 * Region15R mantiene el mismo código de región, sin embargo, para la región 16 se cambia a 8.
 
-* Se decidió generar diccionarios y listas dentro del modulo resources.py para acceder fácilmente a ellos a través de clave : valor en nuestro script principal.
+* Las comunas que comiencen con 16xxx no serán almacenadas en la base de datos, puesto que estas ya están pero con otro código (08xxx). Sin embargo, la almacenaremos en un diccionario para saber directamente el nombre de dicha comuna.
+
+* Se decidió generar diccionarios y listas dentro del modulo *resources.py* para acceder fácilmente a ellos mediante clave : valor en nuestro script principal *censo.py*.
 
   Se agregó una columna extra que tuviese el nombre relacionado al código.
   
