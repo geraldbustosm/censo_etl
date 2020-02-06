@@ -50,7 +50,7 @@ for chunk in tf:
         cursor.execute(sql, values)
         connection.commit()
 
-print('-- Se insertaron todas las tuplas en la tabla Persona 🕺')
+print('-- Se insertó persona 🕺')
 
 # Se concatenan los dataframes almacenados en el arreglo y se vuelven a eliminar los duplicados
 comunadistrito = pd.concat(comunadistrito).drop_duplicates()
