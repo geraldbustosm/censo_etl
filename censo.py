@@ -56,7 +56,7 @@ print('-- Se insertó persona 🕺')
 comunadistrito = pd.concat(comunadistrito).drop_duplicates()
 zonalocalidad = pd.concat(zonalocalidad).drop_duplicates(subset=['ID_ZONA_LOC'])
 
-print('-Comienza la inserción en el resto de tablas ⏳')
+print('- Comienza la inserción en el resto de tablas ⏳')
 
 # Insertando información base: Regiones
 for key in regiones:
