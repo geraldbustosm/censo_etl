@@ -100,7 +100,6 @@ for index, row in comunadistrito.iterrows():
 print('-- Se insertó en comunadistritos 🌞')
 
 # Insertando información base: ZonaLocalidad
-print('Se van a insertar ', zonalocalidad)
 for index, row in zonalocalidad.iterrows():
     sql = 'INSERT INTO ZONALOCALIDAD VALUES(%s, %s, %s, %s)'
     values = (row['ID_ZONA_LOC'].item(), row['ZC_LOC'].item(), row['DC'].item(), row['AREA'].item())
