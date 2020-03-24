@@ -66,7 +66,7 @@ El entendimiento de los datos se puede conocer a través del manual de usuario. 
 | P11COMUNA_15R | *Comuna de residencia hace 5 años a 15 regiones*             | comuna_residencia_hace_5años_15r | 1101 - 15202                                 |
 | P12COMUNA_15R | *Comuna de nacimiento a 15 regiones*                         | comuna_nacimiento_15r            | 1101 - 15202                                 |
 # Diagrama entidad-relación
-![CENSO DER](https://raw.githubusercontent.com/geraldbustosm/censo_etl/master/censo.png?token=AKKFKK3O27OQ7M5NT5MEQ6S6PGITS)
+![CENSO DER](https://raw.githubusercontent.com/geraldbustosm/censo_etl/master/censo.png)
 
 # Modelo relacional
 
