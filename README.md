@@ -80,7 +80,7 @@ Distrito				   (**<u>codigo_distrito</u>**)
 
 ComunaDistrito	(**<u>codigo_comuna,codigo_distrito</u>**)
 
-ZonaLocalidad	  (**<u>id_zonalocalidad</u>**, zona_localidad, area, *codigo_distrito*)
+ZonaLocalidad	  (**<u>id_zonalocalidad</u>**, zona_localidad, area, *codigo_comuna*)
 
 Persona				 (**<u>id_zonalocalidad,nviv,nhogar,personan</u>**, atributos)
 
