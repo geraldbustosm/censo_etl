@@ -102,7 +102,7 @@ print('-- Se insertó en comunadistritos 🌞')
 # Insertando información base: ZonaLocalidad
 for index, row in zonalocalidad.iterrows():
     sql = 'INSERT INTO ZONALOCALIDAD VALUES(%s, %s, %s, %s)'
-    values = (row['ID_ZONA_LOC'].item(), row['ZC_LOC'].item(), row['DC'].item(), row['AREA'].item())
+    values = (row['ID_ZONA_LOC'].item(), row['ZC_LOC'].item(), row['COMUNA'].item(), row['AREA'].item())
     cursor.execute(sql, values)
     connection.commit()
 print('-- Se insertó en zonalocalidad 🌎')
