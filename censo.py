@@ -42,7 +42,7 @@ print("- Comienza el recorrido de Microdato-Censo2017.csv ⏳")
 
 for chunk in tf:
     comunadistrito.append(chunk[['COMUNA', 'DC']].drop_duplicates())
-    zonalocalidad.append(chunk[['ID_ZONA_LOC', 'ZC_LOC', 'AREA', 'DC']].drop_duplicates(subset=['ID_ZONA_LOC']))
+    zonalocalidad.append(chunk[['ID_ZONA_LOC', 'ZC_LOC', 'AREA', 'COMUNA']].drop_duplicates(subset=['ID_ZONA_LOC']))
 
     for index, row in chunk.iterrows():
         sql = 'INSERT INTO PERSONA VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'

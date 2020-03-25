@@ -33,9 +33,9 @@ CREATE TABLE comunadistrito(
 CREATE TABLE zonalocalidad(
     id_zonalocalidad INTEGER PRIMARY KEY,
     zona_localidad INTEGER,
-    codigo_distrito INTEGER,
+    codigo_comuna INTEGER,
     area INTEGER,
-    FOREIGN KEY (codigo_distrito) REFERENCES distrito(codigo_distrito)
+    FOREIGN KEY (codigo_comuna) REFERENCES comuna(codigo_comuna)
 );
 
 CREATE TABLE persona(
